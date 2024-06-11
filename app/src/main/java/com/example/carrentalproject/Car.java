@@ -18,6 +18,7 @@ public class Car {
         this.imagePath = imagePath;
     }
 
+
     public Car(int carID, String carBrand, String carModel, int price, String color, String status, String imagePath) {
         this.carID = carID;
         this.carBrand = carBrand;

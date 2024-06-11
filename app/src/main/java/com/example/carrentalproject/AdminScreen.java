@@ -90,7 +90,7 @@ public class AdminScreen extends AppCompatActivity {
                     if (status.equals("success")) {
                         saveUsername(username);
 
-                        Intent intent = new Intent(AdminScreen.this, CarViewScreen.class);
+                        Intent intent = new Intent(AdminScreen.this, HomeActivity.class);
                         startActivity(intent);
                     } else {
                         Toast.makeText(AdminScreen.this, message, Toast.LENGTH_SHORT).show();
