@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">CarRentalProject</string>
     <string name="go_to_admin_page">Go To Admin Page</string>
     <string name="go_to_customer_page">Go To Customer Page</string>
@@ -31,4 +31,30 @@
     <string name="delete_car">Delete Car</string>
     <string name="enter_car_id">Enter Car ID To Delete</string>
     <string name="image_path">Image Path</string>
+    <string name="go_button_text">Go</string>
+    <string-array name="car_brands">
+            <item>ALL</item>
+            <item>Toyota</item>
+            <item>Honda</item>
+            <item>Ford</item>
+            <item>BMW</item>
+            <item>Audi</item>
+            <item>Tesla</item>
+            <item>Chevrolet</item>
+            <item>Hyundai</item>
+            <item>Nissan</item>
+            <item>Kia</item>
+            <item>Mercedes-Benz</item>
+            <item>Volkswagen</item>
+            <item>Subaru</item>
+            <item>Lexus</item>
+            <item>Jeep</item>
+            <item>Mazda</item>
+            <item>Volvo</item>
+            <item>Porsche</item>
+            <item>Ferrari</item>
+            <item>Jaguar</item>
+            <item>Land Rover</item>
+            <item>Maserati</item>
+        </string-array>
 </resources>

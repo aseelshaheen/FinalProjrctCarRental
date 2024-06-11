@@ -15,8 +15,11 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:theme="@style/Theme.CarRentalProject"
         tools:targetApi="31">
+
+        <!-- Define your activities here -->
+
         <activity
             android:name=".InsertIDDelete"
             android:exported="false" />
@@ -45,14 +48,28 @@
             android:name=".AdminScreen"
             android:exported="false" />
         <activity
+            android:name=".CustomersPage"
+            android:exported="false" />
+        <activity
+            android:name=".RentDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RentalHistoryActivity"
+            android:exported="false" />
+
+        <!-- Main launcher activity -->
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

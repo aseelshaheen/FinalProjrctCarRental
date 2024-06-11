@@ -21,12 +21,12 @@
     <Button
         android:id="@+id/btnSearch"
         style="@style/CustomButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="121dp"
+        android:layout_height="46dp"
         android:layout_alignRight="@+id/spinnerCarBrand"
         android:layout_marginLeft="259dp"
         android:layout_marginTop="100dp"
-        android:layout_marginRight="-245dp"
+        android:layout_marginRight="-252dp"
         android:text="Apply Filter" />
 
     <androidx.recyclerview.widget.RecyclerView

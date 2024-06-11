@@ -90,7 +90,8 @@ public class CustomerScreen extends AppCompatActivity {
 
                         saveUsername(idNumber);
 
-                        Intent intent = new Intent(CustomerScreen.this, MainActivity.class);
+                        Intent intent = new Intent(CustomerScreen.this, CustomersPage.class);
+                        intent.putExtra("customerID",idNumber);
                         startActivity(intent);
                     } else {
                         Toast.makeText(CustomerScreen.this, message, Toast.LENGTH_SHORT).show();
@@ -131,4 +132,5 @@ public class CustomerScreen extends AppCompatActivity {
         editor.apply();
     }
 }
+
 
