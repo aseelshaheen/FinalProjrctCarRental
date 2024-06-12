@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -63,6 +64,8 @@ public class AddCarScreen extends AppCompatActivity {
     private Button buttonInsertImage;
     private Button buttonInsertCar;
     private EditText imageName;
+    private ImageButton homeBtn;
+    private ImageButton adminBtn;
     private String imagePath = null;
 
     @Override
@@ -87,6 +90,22 @@ public class AddCarScreen extends AppCompatActivity {
                 addCar();
             }
         });
+
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddCarScreen.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        adminBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddCarScreen.this, AdminScreen.class);
+                startActivity(intent);
+            }
+        });
     }
 
     public void setupViews() {
@@ -101,6 +120,8 @@ public class AddCarScreen extends AppCompatActivity {
         buttonInsertImage = findViewById(R.id.buttonInsertImage);
         buttonInsertCar = findViewById(R.id.buttonInsertCar);
         imageName = findViewById(R.id.imageName);
+        homeBtn = findViewById(R.id.homeBtn);
+        adminBtn = findViewById(R.id.adminBtn);
 
 
         if (textViewTitle == null || spinnerCarBrand == null || spinnerStatus == null ||
@@ -198,6 +219,7 @@ public class AddCarScreen extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 Toast.makeText(AddCarScreen.this, "Car inserted successfully", Toast.LENGTH_SHORT).show();
+                finish();
             }
         }, new Response.ErrorListener() {
             @Override

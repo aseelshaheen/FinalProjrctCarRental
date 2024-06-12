@@ -32,6 +32,8 @@
     <string name="enter_car_id">Enter Car ID To Delete</string>
     <string name="image_path">Image Path</string>
     <string name="go_button_text">Go</string>
+    <string name="welcome_admin">Welcome Admin</string>
+    <string name="requests_list">Requests List</string>
     <string-array name="car_brands">
             <item>ALL</item>
             <item>Toyota</item>

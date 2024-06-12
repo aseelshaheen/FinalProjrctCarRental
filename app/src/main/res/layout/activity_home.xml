@@ -21,7 +21,7 @@
             android:layout_marginTop="40dp"
             android:fontFamily="@font/alike_angular"
             android:gravity="center"
-            android:text="Welcome Admin"
+            android:text="@string/welcome_admin"
             android:textColor="#FFFFFFFF"
             android:textSize="20sp" />
 
@@ -71,7 +71,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/alike_angular"
-            android:text="Requests List"
+            android:text="@string/requests_list"
             android:textColor="#FFFFFF"
             android:textSize="20sp" />
 

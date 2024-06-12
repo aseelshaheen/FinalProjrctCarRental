@@ -80,4 +80,15 @@
         android:layout_marginTop="20dp"
         android:text="@string/sign_up1" />
 
+    <ImageButton
+        android:id="@+id/homeBtn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="650dp"
+        app:srcCompat="@drawable/icons8_home_30" />
+
+
+
+
 </RelativeLayout>

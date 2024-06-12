@@ -7,19 +7,15 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -27,7 +23,6 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 import org.json.JSONArray;
@@ -49,6 +44,10 @@ public class CarViewScreen extends AppCompatActivity {
     private Button btnUpdate;
     private Button btnDelete;
     private TextView adminName;
+    private ImageButton homeBtn;
+    private ImageButton adminBtn;
+
+
 
     private List<Car> items = new ArrayList<>();
     private static final String BASE_URL = "http://192.168.1.3:80/CarRental/getItems.php";
@@ -90,6 +89,22 @@ public class CarViewScreen extends AppCompatActivity {
             }
         });
 
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CarViewScreen.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        adminBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CarViewScreen.this, AdminScreen.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 
@@ -101,6 +116,8 @@ public class CarViewScreen extends AppCompatActivity {
         btnAdd = findViewById(R.id.btnAdd);
         btnDelete = findViewById(R.id.btnDelete);
         adminName = findViewById(R.id.adminName);
+        homeBtn = findViewById(R.id.homeBtn);
+        adminBtn = findViewById(R.id.adminBtn);
         rcViewCars.setLayoutManager(new LinearLayoutManager(this));
     }
 

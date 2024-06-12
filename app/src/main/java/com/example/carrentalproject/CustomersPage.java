@@ -13,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -49,6 +50,7 @@ public class CustomersPage extends AppCompatActivity implements Response.Listene
     private CarAdapter carAdapter;
     private RecyclerView recyclerView;
     private String selectedBrand = ""; // Initialize selectedBrand
+    private ImageButton homeBtn;
 
     private String customerID; // Variable to store customerID
     private String firstName;  // Variable to store firstName
@@ -71,6 +73,7 @@ public class CustomersPage extends AppCompatActivity implements Response.Listene
         filterButton = findViewById(R.id.filterButton);
         brandSpinner = findViewById(R.id.brandSpinner);
         historyButton = findViewById(R.id.history_btn);
+        homeBtn = findViewById(R.id.homeBtn);
 
         // Initialize RecyclerView
         recyclerView = findViewById(R.id.recycler_view);
@@ -143,6 +146,14 @@ public class CustomersPage extends AppCompatActivity implements Response.Listene
                 // Set the minimum date to today
                 datePickerDialog.getDatePicker().setMinDate(Calendar.getInstance().getTimeInMillis());
                 datePickerDialog.show();
+            }
+        });
+
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CustomersPage.this, MainActivity.class);
+                startActivity(intent);
             }
         });
 

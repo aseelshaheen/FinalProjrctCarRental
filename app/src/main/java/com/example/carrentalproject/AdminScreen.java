@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -32,6 +33,7 @@ public class AdminScreen extends AppCompatActivity {
     private Button btnAdminSignUp;
     private EditText edtTxtUsername;
     private EditText edtTxtPassword;
+    private ImageButton homeBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +48,13 @@ public class AdminScreen extends AppCompatActivity {
                 adminLogin();
             }
         });
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AdminScreen.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void setupViews() {
@@ -53,6 +62,7 @@ public class AdminScreen extends AppCompatActivity {
         btnAdminSignUp = findViewById(R.id.btncustomerSignUp);
         edtTxtUsername = findViewById(R.id.edtTxtUsername);
         edtTxtPassword = findViewById(R.id.edtTxtPassword);
+        homeBtn = findViewById(R.id.homeBtn);
     }
 
     public void goToSignUpScreen() {

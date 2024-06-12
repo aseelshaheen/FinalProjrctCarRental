@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,6 +32,7 @@ public class CustomerScreen extends AppCompatActivity {
     private Button btnCustomerSignUp;
     private EditText edtTxtID;
     private EditText edtTxtPassword;
+    private ImageButton homeBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +47,14 @@ public class CustomerScreen extends AppCompatActivity {
                 loginCustomer();
             }
         });
+
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CustomerScreen.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void setupViews() {
@@ -52,6 +62,7 @@ public class CustomerScreen extends AppCompatActivity {
         btnCustomerSignUp = findViewById(R.id.btncustomerSignUp);
         edtTxtID = findViewById(R.id.edtTxtID);
         edtTxtPassword = findViewById(R.id.edtTxtPassword);
+        homeBtn = findViewById(R.id.homeBtn);
     }
 
     public void GoToSignUpScreen() {

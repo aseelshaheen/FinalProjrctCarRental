@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:backgroundTint="@color/navyblue"
+            style="@style/CustomButton"
             android:text="History"
             android:textSize="14sp"
             app:cornerRadius="20dp" />
@@ -94,7 +94,6 @@
 
         <Button
             android:id="@+id/enddatebtn"
-
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_weight="1"
@@ -139,20 +138,26 @@
             android:layout_marginTop="10dp"
             android:layout_weight="1"
             android:height="30dp"
-            android:backgroundTint="@color/navyblue"
+            style="@style/CustomButton"
             android:text="Apply Filter"
             android:textSize="16sp"
             app:cornerRadius="10dp" />
     </LinearLayout>
 
-    <!-- Spinner -->
-
     <!-- RecyclerView -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_width="369dp"
+        android:layout_height="212dp"
         android:layout_weight="1"
         android:paddingTop="16dp" />
+
+    <!-- ImageButton under RecyclerView -->
+    <ImageButton
+        android:id="@+id/homeBtn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        app:srcCompat="@drawable/icons8_home_30" />
 
 </LinearLayout>
